@@ -1,6 +1,7 @@
 from sentence_transformers import SentenceTransformer, util
 import json
 import random
+from app import app
 
 dialog_history = []
 
@@ -91,3 +92,6 @@ def get_goodbye_response():
             "Был рад помочь! До новых встреч!",
             "До встречи!",
         ])
+
+if __name__ == "__main__":
+    app.run(debug=False)
